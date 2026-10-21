@@ -1,0 +1,915 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="BookFlow makes booking salon, barber, and personal care appointments simple. Choose a service, select a time, and manage your bookings."
+  >
+  <meta name="theme-color" content="#F5F2EA">
+
+  <title>BookFlow — Appointments, Made Simple</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="#home" aria-label="BookFlow home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="12" fill="#3157FF"/>
+            <path
+              d="M12 11V29L27 14M12 29H28"
+              stroke="#FFFFFF"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <span>bookflow<span class="brand-period">.</span></span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-label="Main navigation"
+      >
+        <a class="nav-link active" href="#home">Overview</a>
+        <a class="nav-link" href="#booking">Book appointment</a>
+        <a class="nav-link" href="#my-bookings">My bookings</a>
+      </nav>
+
+      <a class="header-cta" href="#booking">
+        Book a service
+        <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy">
+
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          YOUR TIME, BETTER SPENT
+        </div>
+
+        <h1>
+          Good things<br>
+          happen when<br>
+          you <span class="text-accent">book ahead.</span>
+        </h1>
+
+        <p class="hero-description">
+          Your next fresh cut, self-care session, or well-deserved
+          reset is just a few clicks away. Choose your service and
+          leave the scheduling to us.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#booking">
+            Book an appointment
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="button button-secondary" href="#services">
+            Explore services
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="proof-avatars" aria-hidden="true">
+            <span>K</span>
+            <span>B</span>
+            <span>J</span>
+          </div>
+          <p>
+            <strong>Less waiting.</strong>
+            <span>More living.</span>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="hero-visual" aria-label="Appointment planning preview">
+        <div class="hero-decoration hero-decoration-one"></div>
+        <div class="hero-decoration hero-decoration-two"></div>
+
+        <div class="preview-card preview-main">
+          <div class="preview-topline">
+            <span class="preview-label">YOUR NEXT APPOINTMENT</span>
+            <span class="preview-icon" aria-hidden="true">↗</span>
+          </div>
+
+          <div class="preview-date">
+            <span class="preview-day">24</span>
+            <div>
+              <strong>Thursday</strong>
+              <span>October · 10:30 AM</span>
+            </div>
+          </div>
+
+          <div class="preview-divider"></div>
+
+          <div class="preview-service">
+            <div class="service-avatar" aria-hidden="true">✳</div>
+            <div class="preview-service-copy">
+              <strong>Signature experience</strong>
+              <span>Personal care · 45 minutes</span>
+            </div>
+            <span class="preview-price">R250</span>
+          </div>
+
+          <div class="preview-confirmed">
+            <span aria-hidden="true">✓</span>
+            Your schedule, sorted
+          </div>
+        </div>
+
+        <div class="floating-note floating-note-top">
+          <span class="floating-note-icon">✦</span>
+          <span>
+            <strong>Simple scheduling</strong>
+            <small>Your time matters</small>
+          </span>
+        </div>
+
+        <div class="floating-note floating-note-bottom">
+          <span class="floating-note-check">✓</span>
+          <span>
+            <strong>Booking made easy</strong>
+            <small>From selection to confirmation</small>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRUST STRIP ==================== -->
+    <section class="trust-strip" aria-label="Booking benefits">
+      <div class="trust-inner">
+        <div class="trust-item">
+          <span aria-hidden="true">◷</span>
+          <span>Book in minutes</span>
+        </div>
+        <div class="trust-item">
+          <span aria-hidden="true">◇</span>
+          <span>Transparent pricing</span>
+        </div>
+        <div class="trust-item">
+          <span aria-hidden="true">✓</span>
+          <span>Clear confirmations</span>
+        </div>
+        <div class="trust-item">
+          <span aria-hidden="true">↻</span>
+          <span>Manage your bookings</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="services-section section-shell" id="services">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">MADE FOR YOUR ROUTINE</span>
+          <h2>Choose your experience.</h2>
+          <p>
+            Find the service that fits your day. Prices and durations
+            are displayed before you book.
+          </p>
+        </div>
+
+        <a class="text-link" href="#booking">
+          View booking options <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div
+        class="service-grid"
+        id="service-grid"
+        aria-live="polite"
+        aria-busy="true"
+      >
+        <!-- Rendered dynamically by script.js -->
+        <div class="service-loading">Preparing available services...</div>
+      </div>
+    </section>
+
+    <!-- ==================== BOOKING WIZARD ==================== -->
+    <section class="booking-section" id="booking">
+      <div class="section-shell booking-shell">
+
+        <div class="booking-intro">
+          <span class="eyebrow">YOUR NEXT APPOINTMENT</span>
+          <h2>A few steps.<br><span class="text-accent">You're booked.</span></h2>
+          <p>
+            Choose your service, find a time that works, and confirm
+            your details. Review everything before finalising.
+          </p>
+
+          <div class="booking-assurance">
+            <span aria-hidden="true">✓</span>
+            <div>
+              <strong>No payment required</strong>
+              <p>This portfolio demo does not process payments.</p>
+            </div>
+          </div>
+
+          <div class="booking-assurance">
+            <span aria-hidden="true">◷</span>
+            <div>
+              <strong>Choose your own time</strong>
+              <p>Only available demo time slots can be selected.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-panel" id="booking-panel">
+
+          <!-- Wizard progress -->
+          <div class="wizard-header">
+            <div class="wizard-heading">
+              <div>
+                <span class="eyebrow">BOOKING WORKSPACE</span>
+                <h3 id="wizard-title">Choose a service</h3>
+              </div>
+              <span class="step-counter" id="step-counter">STEP 1 OF 4</span>
+            </div>
+
+            <div
+              class="progress-track"
+              role="progressbar"
+              aria-label="Booking progress"
+              aria-valuemin="1"
+              aria-valuemax="4"
+              aria-valuenow="1"
+              id="wizard-progress"
+            >
+              <span class="progress-fill" id="progress-fill"></span>
+            </div>
+
+            <ol class="wizard-steps" aria-label="Booking steps">
+              <li class="wizard-step active" data-step-indicator="1">
+                <span>01</span> Service
+              </li>
+              <li class="wizard-step" data-step-indicator="2">
+                <span>02</span> Date & time
+              </li>
+              <li class="wizard-step" data-step-indicator="3">
+                <span>03</span> Your details
+              </li>
+              <li class="wizard-step" data-step-indicator="4">
+                <span>04</span> Review
+              </li>
+            </ol>
+          </div>
+
+          <form id="booking-form" novalidate>
+
+            <!-- STEP 1: SERVICE -->
+            <section
+              class="wizard-page active"
+              id="step-1"
+              data-step="1"
+              aria-labelledby="step-1-title"
+            >
+              <div class="step-intro">
+                <h4 id="step-1-title">What can we help you with?</h4>
+                <p>Select a service to see its price and estimated duration.</p>
+              </div>
+
+              <div
+                class="wizard-service-list"
+                id="wizard-service-list"
+                aria-label="Available services"
+              >
+                <!-- Rendered dynamically -->
+                <p class="empty-state">Loading services...</p>
+              </div>
+
+              <p class="field-error" id="service-error" role="alert"></p>
+
+              <div class="booking-selection-summary" id="service-summary" hidden>
+                <span class="summary-label">YOUR SELECTION</span>
+                <div>
+                  <strong id="selected-service-name">No service selected</strong>
+                  <span id="selected-service-duration">Choose a service to continue</span>
+                </div>
+                <strong id="selected-service-price">R0</strong>
+              </div>
+            </section>
+
+            <!-- STEP 2: DATE AND TIME -->
+            <section
+              class="wizard-page"
+              id="step-2"
+              data-step="2"
+              aria-labelledby="step-2-title"
+              hidden
+            >
+              <div class="step-intro">
+                <h4 id="step-2-title">Find your perfect time.</h4>
+                <p>Choose an available date, then select a time slot.</p>
+              </div>
+
+              <div class="schedule-layout">
+
+                <div class="calendar-container">
+                  <div class="calendar-header">
+                    <button
+                      class="icon-button"
+                      id="calendar-prev"
+                      type="button"
+                      aria-label="Previous month"
+                    >←</button>
+
+                    <h5 id="calendar-month-label" aria-live="polite">
+                      Loading calendar...
+                    </h5>
+
+                    <button
+                      class="icon-button"
+                      id="calendar-next"
+                      type="button"
+                      aria-label="Next month"
+                    >→</button>
+                  </div>
+
+                  <div
+                    class="calendar-grid calendar-weekdays"
+                    aria-hidden="true"
+                  >
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                    <span>Sun</span>
+                  </div>
+
+                  <div
+                    class="calendar-grid calendar-days"
+                    id="calendar-days"
+                    role="group"
+                    aria-label="Choose appointment date"
+                  >
+                    <!-- Date buttons rendered by script.js -->
+                  </div>
+
+                  <div class="calendar-legend">
+                    <span><i class="legend-dot available"></i> Available</span>
+                    <span><i class="legend-dot unavailable"></i> Unavailable</span>
+                  </div>
+                </div>
+
+                <div class="time-container">
+                  <div class="time-heading">
+                    <h5>Available times</h5>
+                    <p id="selected-date-label">Select a date first</p>
+                  </div>
+
+                  <div
+                    class="time-slots"
+                    id="time-slots"
+                    role="group"
+                    aria-label="Available appointment times"
+                    aria-live="polite"
+                  >
+                    <p class="empty-state">
+                      Choose a date to view available times.
+                    </p>
+                  </div>
+
+                  <p class="field-error" id="date-error" role="alert"></p>
+                  <p class="field-error" id="time-error" role="alert"></p>
+                </div>
+
+              </div>
+
+              <div class="booking-selection-summary" id="schedule-summary" hidden>
+                <span class="summary-label">SELECTED SLOT</span>
+                <div>
+                  <strong id="schedule-summary-date">No date selected</strong>
+                  <span id="schedule-summary-time">No time selected</span>
+                </div>
+                <span class="selection-check" aria-hidden="true">✓</span>
+              </div>
+            </section>
+
+            <!-- STEP 3: CUSTOMER DETAILS -->
+            <section
+              class="wizard-page"
+              id="step-3"
+              data-step="3"
+              aria-labelledby="step-3-title"
+              hidden
+            >
+              <div class="step-intro">
+                <h4 id="step-3-title">Tell us who's coming.</h4>
+                <p>Enter your details so you can identify your demo booking.</p>
+              </div>
+
+              <div class="form-grid">
+
+                <div class="form-field">
+                  <label for="customer-name">Full name</label>
+                  <input
+                    type="text"
+                    id="customer-name"
+                    name="customerName"
+                    placeholder="e.g. Keith Gotohori"
+                    autocomplete="name"
+                    minlength="2"
+                    maxlength="80"
+                    required
+                    aria-describedby="customer-name-error"
+                  >
+                  <p class="field-error" id="customer-name-error" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                  <label for="customer-email">Email address</label>
+                  <input
+                    type="email"
+                    id="customer-email"
+                    name="customerEmail"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    maxlength="254"
+                    required
+                    aria-describedby="customer-email-error"
+                  >
+                  <p class="field-error" id="customer-email-error" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                  <label for="customer-phone">
+                    Phone number <span class="optional-label">Optional</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="customer-phone"
+                    name="customerPhone"
+                    placeholder="+27 00 000 0000"
+                    autocomplete="tel"
+                    maxlength="25"
+                    aria-describedby="customer-phone-error"
+                  >
+                  <p class="field-error" id="customer-phone-error" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                  <label for="customer-notes">
+                    Special requests <span class="optional-label">Optional</span>
+                  </label>
+                  <textarea
+                    id="customer-notes"
+                    name="customerNotes"
+                    placeholder="Anything we should know before your appointment?"
+                    rows="3"
+                    maxlength="500"
+                  ></textarea>
+                  <span class="field-hint">Maximum 500 characters.</span>
+                </div>
+
+              </div>
+
+              <div class="privacy-note">
+                <span aria-hidden="true">ⓘ</span>
+                <p>
+                  This is a local portfolio demo. Your booking details
+                  are stored in this browser when you confirm. Do not
+                  enter sensitive personal information.
+                </p>
+              </div>
+
+            </section>
+
+            <!-- STEP 4: REVIEW -->
+            <section
+              class="wizard-page"
+              id="step-4"
+              data-step="4"
+              aria-labelledby="step-4-title"
+              hidden
+            >
+              <div class="step-intro">
+                <h4 id="step-4-title">One last look.</h4>
+                <p>Check your appointment details before confirming.</p>
+              </div>
+
+              <div class="review-card">
+
+                <div class="review-card-header">
+                  <div class="review-icon" aria-hidden="true">✓</div>
+                  <div>
+                    <strong>Appointment summary</strong>
+                    <p>Please verify the information below.</p>
+                  </div>
+                </div>
+
+                <div class="review-section">
+                  <span class="summary-label">SERVICE</span>
+                  <div class="review-row">
+                    <div>
+                      <strong id="review-service-name">—</strong>
+                      <span id="review-service-description">—</span>
+                    </div>
+                    <strong id="review-service-price">R0</strong>
+                  </div>
+                  <button
+                    class="review-edit"
+                    type="button"
+                    data-edit-step="1"
+                  >Edit service</button>
+                </div>
+
+                <div class="review-section">
+                  <span class="summary-label">DATE & TIME</span>
+                  <div class="review-row">
+                    <div>
+                      <strong id="review-date">—</strong>
+                      <span id="review-time">—</span>
+                    </div>
+                    <span class="review-symbol" aria-hidden="true">◷</span>
+                  </div>
+                  <button
+                    class="review-edit"
+                    type="button"
+                    data-edit-step="2"
+                  >Edit schedule</button>
+                </div>
+
+                <div class="review-section">
+                  <span class="summary-label">YOUR DETAILS</span>
+                  <div class="review-customer">
+                    <strong id="review-customer-name">—</strong>
+                    <span id="review-customer-email">—</span>
+                    <span id="review-customer-phone"></span>
+                    <p id="review-customer-notes"></p>
+                  </div>
+                  <button
+                    class="review-edit"
+                    type="button"
+                    data-edit-step="3"
+                  >Edit details</button>
+                </div>
+
+                <div class="review-total">
+                  <div>
+                    <span>Total appointment cost</span>
+                    <small>No payment collected in this demo</small>
+                  </div>
+                  <strong id="review-total-price">R0</strong>
+                </div>
+
+              </div>
+
+              <label class="confirmation-consent">
+                <input
+                  type="checkbox"
+                  id="confirm-details"
+                  required
+                >
+                <span>
+                  I have reviewed my appointment details and confirm
+                  that they are correct.
+                </span>
+              </label>
+
+              <p class="field-error" id="confirmation-error" role="alert"></p>
+            </section>
+
+            <!-- WIZARD ACTIONS -->
+            <div class="wizard-actions" id="wizard-actions">
+              <button
+                class="button button-secondary wizard-back"
+                id="wizard-back"
+                type="button"
+                disabled
+              >
+                <span aria-hidden="true">←</span> Back
+              </button>
+
+              <button
+                class="button button-primary wizard-next"
+                id="wizard-next"
+                type="button"
+              >
+                Continue <span aria-hidden="true">→</span>
+              </button>
+
+              <button
+                class="button button-primary wizard-confirm"
+                id="wizard-confirm"
+                type="button"
+                hidden
+              >
+                Confirm demo booking <span aria-hidden="true">✓</span>
+              </button>
+            </div>
+
+          </form>
+
+          <!-- SUCCESS SCREEN -->
+          <section
+            class="confirmation-screen"
+            id="confirmation-screen"
+            aria-labelledby="confirmation-title"
+            tabindex="-1"
+            hidden
+          >
+            <div class="success-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="30" fill="#E8F7ED"/>
+                <path
+                  d="M19 32L28 41L46 23"
+                  stroke="#198754"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <span class="eyebrow">DEMO BOOKING CREATED</span>
+            <h3 id="confirmation-title">You're on the calendar.</h3>
+            <p class="confirmation-description" id="confirmation-description">
+              Your demo appointment has been saved in this browser.
+            </p>
+
+            <div class="confirmation-details">
+              <div>
+                <span class="summary-label">BOOKING REFERENCE</span>
+                <strong id="confirmation-booking-id">—</strong>
+              </div>
+              <button
+                class="text-button"
+                id="copy-booking-id"
+                type="button"
+              >Copy reference</button>
+
+              <div class="confirmation-divider"></div>
+
+              <div class="confirmation-detail-row">
+                <span>Service</span>
+                <strong id="confirmation-service">—</strong>
+              </div>
+              <div class="confirmation-detail-row">
+                <span>Date</span>
+                <strong id="confirmation-date">—</strong>
+              </div>
+              <div class="confirmation-detail-row">
+                <span>Time</span>
+                <strong id="confirmation-time">—</strong>
+              </div>
+              <div class="confirmation-detail-row">
+                <span>Total</span>
+                <strong id="confirmation-price">—</strong>
+              </div>
+              <div class="confirmation-detail-row">
+                <span>Status</span>
+                <span class="booking-status status-confirmed">
+                  Demo confirmed
+                </span>
+              </div>
+            </div>
+
+            <div class="demo-disclaimer">
+              <strong>Portfolio demonstration only</strong>
+              <p>
+                This is not a real-world appointment. No business has
+                received your booking, and no email or SMS has been sent.
+                A production service would require a secure backend.
+              </p>
+            </div>
+
+            <div class="confirmation-actions">
+              <button
+                class="button button-primary"
+                id="view-my-bookings"
+                type="button"
+              >
+                View my bookings
+              </button>
+              <button
+                class="button button-secondary"
+                id="book-another"
+                type="button"
+              >
+                Make another booking
+              </button>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BOOKING MANAGEMENT ==================== -->
+    <section class="my-bookings-section section-shell" id="my-bookings">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">YOUR PERSONAL SCHEDULE</span>
+          <h2>Bookings at a glance.</h2>
+          <p>
+            Review and manage the demo appointments saved in this browser.
+          </p>
+        </div>
+
+        <button
+          class="button button-secondary"
+          id="refresh-bookings"
+          type="button"
+        >
+          <span aria-hidden="true">↻</span> Refresh
+        </button>
+      </div>
+
+      <div class="bookings-toolbar">
+        <div class="booking-count">
+          <span class="booking-count-number" id="booking-count">0</span>
+          <span>saved demo bookings</span>
+        </div>
+
+        <label class="search-field" for="booking-search">
+          <span aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="booking-search"
+            placeholder="Search by reference or service..."
+            autocomplete="off"
+          >
+        </label>
+
+        <label class="filter-field" for="booking-filter">
+          <span class="visually-hidden">Filter bookings</span>
+          <select id="booking-filter">
+            <option value="all">All bookings</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="past">Past appointments</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </label>
+      </div>
+
+      <div
+        class="bookings-list"
+        id="bookings-list"
+        aria-live="polite"
+        aria-busy="true"
+      >
+        <!-- Rendered dynamically by script.js -->
+        <div class="bookings-empty">
+          <div class="empty-icon" aria-hidden="true">◷</div>
+          <h3>Your schedule starts here.</h3>
+          <p>
+            You haven't created any demo bookings yet.
+            Choose a service above to get started.
+          </p>
+          <a class="button button-primary" href="#booking">
+            Create a booking
+          </a>
+        </div>
+      </div>
+
+      <div class="storage-notice">
+        <span aria-hidden="true">ⓘ</span>
+        <p>
+          <strong>Local demo storage.</strong>
+          Bookings are saved only in this browser using localStorage.
+          They are not synchronised across devices or connected to a
+          real business. Clearing browser data may remove them.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== FINAL CTA ==================== -->
+    <section class="final-cta section-shell">
+      <div class="final-cta-content">
+        <span class="eyebrow">MAKE SPACE FOR WHAT MATTERS</span>
+        <h2>Your time is valuable.<br>Book accordingly.</h2>
+        <p>One less thing to organise. One more thing to look forward to.</p>
+        <a class="button button-light" href="#booking">
+          Find your appointment <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="final-cta-decoration" aria-hidden="true">
+        <span>BF</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <a class="brand footer-brand" href="#home" aria-label="BookFlow home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="12" fill="#3157FF"/>
+            <path
+              d="M12 11V29L27 14M12 29H28"
+              stroke="#FFFFFF"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <span>bookflow<span class="brand-period">.</span></span>
+      </a>
+
+      <p>Designed for better days and simpler scheduling.</p>
+
+      <div class="footer-meta">
+        <span>© <span id="current-year">2026</span> BookFlow</span>
+        <span class="footer-demo-label">
+          Portfolio demo · No real bookings
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== GLOBAL FEEDBACK ==================== -->
+  <div
+    class="toast-region"
+    id="toast-region"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+  <div
+    class="modal-backdrop"
+    id="modal-backdrop"
+    hidden
+  >
+    <section
+      class="confirmation-modal"
+      id="confirmation-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      aria-describedby="modal-description"
+      tabindex="-1"
+    >
+      <div class="modal-icon" aria-hidden="true">!</div>
+      <h2 id="modal-title">Confirm this action?</h2>
+      <p id="modal-description">
+        Please review this action before continuing.
+      </p>
+
+      <div class="modal-actions">
+        <button
+          class="button button-secondary"
+          id="modal-cancel"
+          type="button"
+        >Keep booking</button>
+        <button
+          class="button button-primary"
+          id="modal-confirm"
+          type="button"
+        >Confirm</button>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
